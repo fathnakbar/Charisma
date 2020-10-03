@@ -1,0 +1,40 @@
+.ev-item{
+    display: grid;
+    grid-template: 
+    [h] "cont cont cont" 30px [h-end]
+    [center] "cont cont cont" 1fr [center-end]
+    [c] "cont cont cont" auto [c-end]
+    / 1fr 1fr 1fr
+    ;
+}
+
+.input-cont {
+    display: grid;
+    grid-template:
+    [h] "pp id opt" 35px [h-end]
+    [b] ". input input" auto [b-end]
+    [f] ". foot foot" auto [f-end]
+    / 50px 1fr 20px
+    ;
+    align-items: center;
+}
+
+.post-grid{
+    display: grid;
+    grid-template: 
+    [h] "pp id opt" 35px [h-end]
+    [b] ". b b" auto [b-end]
+    [f] ". foot foot" auto [f-end]
+    / 50px 1fr 20px
+    ;
+    align-items: center;
+}
+
+.ev-grid{
+    display: grid;
+    grid-template: 
+    [h] "h h" auto [h-end]
+    [b] "content des" auto [b-end]
+    / 1fr 250px
+    ;
+}

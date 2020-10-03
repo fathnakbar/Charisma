@@ -1,0 +1,515 @@
+// #eecda3 → #ef629f
+$bords: 1px solid rgba(234,234,234, .7)
+$bords-sec: 1px solid rgba(180,180,180, .7)
+$txt: 1px 1px 3px rgba(0,0,0,.7)
+$color-pri: #ef629f
+$color-sec: #eecda3
+$color-b: #03A9F4
+$paper: rgb(240,240,240)
+$boxshadow: 3px 3px 5px rgba(0,0,0,.3)
+
+// Mixins
+
+@mixin cover
+    background-repeat: no-repeat !important
+    background-size: cover !important
+    background-position: center !important
+
+@mixin container
+    border-radius: 20px
+    padding: 10px 18px
+    margin: 17px 0
+
+@mixin profile
+    width: 35px
+    height: 35px
+    border-radius: 50%
+    border: $bords
+
+@mixin column-flex
+    display: flex
+    flex-direction: column
+
+@mixin pict-small
+    width: 10px
+    height: 10px
+    border-radius: 50%
+
+@mixin footer-post
+    background: $color-pri 
+    margin-top: 7px
+    margin-bottom: 7px
+    margin-right: 9px
+    padding: 2px
+    padding-right: 7px
+    display: flex
+    align-items: center
+    border-radius: 20px
+    color: white
+    list-style: none
+    font-size: 12px
+    font-weight: bold
+    &:hover
+        cursor: pointer
+
+@mixin post-f
+    .footer
+        grid-area: foot
+        padding-top: 2px   
+        .grp-btn
+            border-bottom: $bords
+            margin-bottom: 5px
+        .off
+            border: none
+        .review
+            font-size: 13px
+            padding-top: 3px
+            .row
+                margin: 2px 0
+            .row.center
+                display: flex
+                justify-content: center
+            .hint
+                color: rgb(150,150,150)
+        .tags
+            padding: 5px
+            padding-left: 0
+            font-size: 13px
+            color: #03A9F4
+            .t-info
+                display: flex
+                align-items: center
+                margin: 1px 0
+                &:hover
+                    cursor: pointer
+                    text-decoration: underline
+            img
+                width: 24px
+                height: 13px
+        li.margins
+            margin: 0 21px
+        li.sub-margin
+            margin: 0 11px
+        li
+            @include footer-post
+            color: rgb(90,90,90)
+            margin: 7px 0
+            padding: 0
+            background: none
+            border-radius: 0
+            img
+                border-radius: 0
+                width: 15px
+                height: auto
+                margin-right: 5px
+
+@mixin post-h
+    @include container
+    border: $bords
+    .opt
+        grid-area: opt
+        &:hover
+            cursor: pointer
+        li
+            width: 3px
+            height: 3px
+            border-radius: 50%
+            background: black
+            margin: 0
+            padding: 0
+            list-style-type: none
+    .row
+        display: flex
+        align-items: center
+        grid-area: id
+        .sec
+            color: #a2a2a2
+            font-size: 12px
+            margin-left: 5px
+            display: flex
+            align-items: center
+            &::before
+                content: ''
+                width: 3px
+                height: 3px
+                border-radius: 50%
+                margin-right: 5px
+                background-color: #a2a2a2
+        .username
+            color: black
+            font-size: 15px
+            font-weight: bold
+    img.user-prof
+        @include profile
+        grid-area: pp 
+
+@mixin filter
+    background: linear-gradient(200deg, rgba(239,118,160, .1), #efa5a2)
+
+@mixin grad1
+    background: linear-gradient(41deg, #eecda3, #ef629f)
+
+@mixin centerflex-ico
+    display: flex
+    flex-direction: row
+    place-items: center
+    place-content: center
+
+@mixin center-h
+    left: 50%
+    transform: translate(-50%, 0)
+
+.verified-icon
+    background: url(/res/instaicon.png)
+    background-repeat: no-repeat
+    background-position: -244px -369px
+    height: 12px
+    width: 12px
+    margin: 0 2px
+    display: inline-block
+
+#widget
+    font-family: sans-serif
+    color: white
+    background: linear-gradient(41deg, #eecda3, #ef629f)
+    border: .5px solid rgb(234, 234, 234)
+    border-radius: 20px
+    margin: 27px 20px
+    padding: 17px
+    box-shadow: 0px 7px 12px rgba(236,145,159,.57)
+    .t-cont
+        font-size: 15px
+        color: white
+        font-family: inherit
+        margin: 7px 0
+    .h-widget
+        font-family: inherit
+        display: flex
+        align-items: center
+        p
+            .pri
+                color: white
+                font-size: 18px
+            .sec
+                color: white
+                opacity: .7
+                font-size: 13px
+        .l-widget
+            border: none
+            background: none
+            display: grid
+            margin-right: 5px
+            &:hover
+                cursor: pointer
+            &:focus
+                outline: none
+            li
+                list-style-type: none
+                height: 4px
+                width: 4px
+                background: white
+                border-radius: 50%
+    .cal-cont
+        display: flex
+        overflow-x: scroll
+        &::-webkit-scrollbar
+            width: 0
+        .date
+            display: flex
+            justify-content: center
+            list-style-type: none
+            min-width: 45px
+            font-size: 13px
+            // border: 1px solid white
+            border: $bords
+            padding: 3px 5px
+            border-radius: 13px
+            margin-right: 7px
+            opacity: .8
+            &:hover
+                cursor: pointer
+            &.act
+                background: #eecda3
+                border: none
+                opacity: 1
+            &.ev
+                border: .5px solid #eecda3
+                color: #eecda3
+            .pri
+                margin-right: 2px
+                font-weight: 300
+            .sec
+                font-weight: 300
+    .ev-cont
+        display: flex
+        justify-content: center
+        margin: 7px 0
+        .ev-item
+            @include cover
+            list-style: none
+            width: 200px
+            height: 200px
+            box-shadow: $boxshadow
+            border-radius: 20px
+            text-shadow: 1px 1px 3px rgba(0,0,0,.7)
+            &:hover
+                cursor: pointer
+            .h-ev
+                display: flex
+                justify-content: flex-end
+                grid-area: head
+                .date
+                    font-size: 13px
+                    text-shadow: inherit
+            .t-ev
+                grid-area: cont
+                overflow: hidden
+                display: flex
+                flex-direction: column
+                justify-content: flex-end
+                text-shadow: inherit
+                padding: 7px 10px
+                border-radius: 20px
+                @include filter
+                .date
+                    font-size: 15px
+                    color: rgb(240,240,240)
+                .title
+                    font-size: 21px
+                    font-weight: normal
+                .des
+                    font-size: 13px
+                    margin: 3px 0
+                    color: rgb(240,240,240)
+    .rem-cont
+        li
+            list-style-type: none
+            background: rgba(255,255,255,.1)
+            border-radius: 7px
+            padding: 10px
+            margin: 8px 0
+            &:hover
+                cursor: pointer
+            .title
+                font-size: 15px
+                font-weight: bold
+            .info
+                margin: 0
+                font-size: 12px
+                color: rgb(240,240,240)
+
+#content
+    margin: 27px 20px
+    font-family: sans-serif
+    overflow-y: scroll
+    &::-webkit-scrollbar
+        width: 0
+    .title-cont
+        margin-bottom: 13px
+        .title
+            font-size: 16px
+            font-family: inherit
+            font-weight: bold
+    .event-post
+        @include post-h
+        border: none
+        .header
+            grid-area: h
+        .post-data
+            margin-top: 11px
+            background: linear-gradient(30deg, #1f1f1f, #3c3c3c)
+            padding: 16px
+            color: white
+            font-weight: 500
+            font-family: 'Montserrat', sans-serif
+            .desc
+                margin-bottom: 7px
+                p
+                    margin: 12px 0
+                    font-size: 14px
+                    line-height: 17px
+                .date
+                    font-size: 13px
+                    color: $color-b
+                span
+                    color: #afafaf
+                    &:hover
+                        cursor: pointer
+            .add-button
+                    font-size: 12px
+                    font-weight: bold
+                    font-family: inherit
+                    margin: 0 17px
+                    flex-grow: 1
+                    background: $color-b
+                    border-radius: 20px
+                    border: none
+                    padding: 7px
+                    &:focus
+                        outline: none
+                    &:hover
+                        cursor: pointer
+            .footer
+                margin-bottom: 21px
+                li
+                    opacity: .7
+                    color: white !important
+
+            @include post-f
+        .post-content
+            // Post must calculate in script
+            margin-top: 11px
+            grid-area: content
+            @include cover
+            height: 400px
+            display: flex
+            flex-direction: column
+            align-items: stretch
+            justify-content: flex-end
+            padding: 7px
+            .row
+                display: flex
+                align-items: center
+                justify-content: center
+            .join-button
+                width: 70px
+                font-size: 14px
+                padding: 7px 0
+                background: linear-gradient(45deg, #3fe016, #2db913)
+                border: none
+                font-weight: bold
+                border-radius: 20px
+                color: white
+                &:focus
+                    outline: none
+                &:hover
+                    cursor: pointer
+            .title
+                margin: 0
+                color: white
+                font-size: 13px
+            .numbers
+                font-size: 12px
+                color: white
+                width: 100px
+            .container
+                display: flex
+                padding: 11px
+                border-radius: 7px
+                margin-bottom: 7px
+                background: linear-gradient(45deg, #1f1f1f, #3c3c3c)
+                .column
+                    flex-grow: 1
+            .progress-bar
+                height: 3px
+                margin-right: 7px
+                width: 100%
+                background: #bfbfbfb8
+            .progress-bar-fill
+                background: white
+                height: 3px
+            
+    .writes-post
+        @include post-h
+        @include post-f
+        .post
+            grid-area: b
+            font-size: 15px
+            margin: 7px 0
+            .des
+                margin: 0
+    .input-cont
+        @include post-h
+        .text-button
+            grid-area: input
+            background: none
+            border: none
+            width: 200px
+            padding: 5px 0
+            text-align: left
+            font-size: 15px
+            color: rgb(180,180,180)
+            &:hover
+                cursor: text
+            &:focus
+                outline: none
+        .footer
+            grid-area: foot
+            display: flex
+            li
+                @include footer-post
+                .add
+                    @include centerflex-ico
+                    border: none
+                    background: white
+                    border-radius: 50%
+                    width: 20px
+                    height: 20px
+
+                    margin-right: 7px
+                    &:hover
+                        cursor: pointer
+                    img
+                        height: 15px
+                        width: 15px
+                
+    .storyline-cont
+        @include container
+        display: flex
+        flex-direction: row
+        align-items: center
+        overflow: scroll
+        &::-webkit-scrollbar
+            width: 0
+        li
+            @include cover
+            position: relative
+            background: $paper
+            min-width: 80px
+            min-height: 70px
+            text-align: center
+            padding: 7px
+            list-style: none
+            margin-right: 11px
+            border-radius: 20px
+            // overflow: hidden
+            &:hover
+                cursor: pointer
+        li.act
+            @include grad1
+            box-shadow: 2px 2px 5px rgba(236,145,159,.57)
+            border: none
+        li.off
+            background: none
+            border: none
+            .userid
+                text-shadow: none
+                color: black
+        .style-1
+            img
+                width: 50px
+                height: 50px
+                border-radius: 50%
+            .userid
+                display: flex
+                justify-content: center
+                font-size: 12.7px
+                color: white
+                text-shadow: $txt
+            .add
+                @include centerflex-ico
+                left: 61%
+                position: absolute
+                z-index: 99
+                bottom: 27px
+                color: black
+                border: none
+                background: white
+                border-radius: 50%
+                width: 17px
+                height: 17px
+                &:hover
+                    cursor: pointer
+                img
+                    height: 15px
+                    width: 15px

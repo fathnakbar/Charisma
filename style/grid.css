@@ -1,0 +1,26 @@
+/* #cc2b5e → #753a88 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    /* temp properties */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* Change selector to #app when it deploy */
+    display: grid;
+
+    grid-template: 
+    [app-start] "widget app ." 1fr [app-end]
+    / 300px 1fr 243px
+    ;
+    overflow: hidden;
+}
+
+.l-widget{
+    display: grid;
+    grid-template: 
+    [row-1] "a b" 10px [row-1-end]
+    [row-2] "c d" 10px [row-2-end]
+    / 10px 10px;
+    place-items: center;
+}

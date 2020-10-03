@@ -1,0 +1,129 @@
+#widget
+    font-family: sans-serif
+    color: white
+    background: linear-gradient(41deg, #eecda3, #ef629f)
+    border: .5px solid rgb(234, 234, 234)
+    border-radius: 20px
+    margin: 27px 20px
+    padding: 17px
+    box-shadow: 0px 7px 12px rgba(236,145,159,.57)
+    .t-cont
+        font-size: 15px
+        color: white
+        font-family: inherit
+        margin: 7px 0
+    .h-widget
+        font-family: inherit
+        display: flex
+        align-items: center
+        p
+            .pri
+                color: white
+                font-size: 18px
+            .sec
+                color: white
+                opacity: .7
+                font-size: 13px
+        .l-widget
+            border: none
+            background: none
+            display: grid
+            margin-right: 5px
+            &:hover
+                cursor: pointer
+            &:focus
+                outline: none
+            li
+                list-style-type: none
+                height: 4px
+                width: 4px
+                background: white
+                border-radius: 50%
+    .cal-cont
+        display: flex
+        overflow-x: scroll
+        &::-webkit-scrollbar
+            width: 0
+        .date
+            display: flex
+            justify-content: center
+            list-style-type: none
+            min-width: 45px
+            font-size: 13px
+            // border: 1px solid white
+            border: $bords
+            padding: 3px 5px
+            border-radius: 13px
+            margin-right: 7px
+            opacity: .8
+            &:hover
+                cursor: pointer
+            &.act
+                background: #eecda3
+                border: none
+                opacity: 1
+            &.ev
+                border: .5px solid #eecda3
+                color: #eecda3
+            .pri
+                margin-right: 2px
+                font-weight: 300
+            .sec
+                font-weight: 300
+    .ev-cont
+        display: flex
+        justify-content: center
+        margin: 7px 0
+        .ev-item
+            @include cover
+            list-style: none
+            width: 200px
+            height: 200px
+            box-shadow: $boxshadow
+            border-radius: 20px
+            text-shadow: 1px 1px 3px rgba(0,0,0,.7)
+            &:hover
+                cursor: pointer
+            .h-ev
+                display: flex
+                justify-content: flex-end
+                grid-area: head
+                .date
+                    font-size: 13px
+                    text-shadow: inherit
+            .t-ev
+                grid-area: cont
+                overflow: hidden
+                display: flex
+                flex-direction: column
+                justify-content: flex-end
+                text-shadow: inherit
+                padding: 7px 10px
+                border-radius: 20px
+                @include filter
+                .date
+                    font-size: 15px
+                    color: rgb(240,240,240)
+                .title
+                    font-size: 21px
+                    font-weight: normal
+                .des
+                    font-size: 13px
+                    margin: 3px 0
+                    color: rgb(240,240,240)
+    .rem-cont
+        li
+            list-style-type: none
+            background: rgba(255,255,255,.1)
+            border-radius: 7px
+            padding: 10px
+            margin: 8px 0
+            &:hover
+                cursor: pointer
+            .title
+                font-size: 15px
+                font-weight: bold
+            .info
+                margin: 0
+                font-size: 12px
+                color: rgb(240,240,240)
