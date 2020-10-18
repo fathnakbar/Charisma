@@ -1,0 +1,23 @@
+{
+  "name": "charisma",
+  "version": "1.0.0",
+  "description": "This program is purposed to be softwere management for organization and community groups that are flexible and scaleable",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://fathnakbar:bixsvznivpF7EWm@github.com/fathnakbar/Charisma.git"
+  },
+  "author": "Muhammad Fathan Akbar",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/fathnakbar/Charisma/issues"
+  },
+  "homepage": "https://github.com/fathnakbar/Charisma#readme"
+}

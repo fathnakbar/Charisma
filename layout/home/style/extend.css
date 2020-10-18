@@ -1,0 +1,407 @@
+#app .teamstatus .hint.sec {
+  font-weight: normal;
+  text-align: center;
+  margin: 13px 0;
+}
+
+#app .teamstatus .hint.input {
+  padding: 5px;
+  padding-left: 15px;
+  border-radius: 5px;
+  margin-bottom: 11px;
+}
+
+#app .teamstatus .hint.input:hover {
+  cursor: text;
+}
+
+#app .teamstatus .profile-list {
+  font-size: 13px;
+}
+
+#app .teamstatus .profile-list .name {
+  font-weight: bold;
+}
+
+#app .teamstatus .profile-list .status {
+  font-size: 11px;
+}
+
+#app .h-aligned.left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-area: left;
+}
+
+#app .h-aligned.left-side .teamstatus {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#app .h-aligned.main-content {
+  grid-area: center;
+  display: block;
+}
+
+#app .hint {
+  margin: 2px 0;
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#app .dropdown .title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#app .dropdown button {
+  background: none;
+  border: none;
+}
+
+#app .dropdown .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#app .dropdown .row:hover {
+  cursor: pointer;
+}
+
+#app .dropdown .row .title {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#app .slider.calendar .header .year {
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#app .slider.calendar .header .month {
+  font-weight: lighter;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#app .slider.calendar .row-item li {
+  list-style: none;
+  font-size: 12px;
+  margin: 0 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-radius: 7px;
+}
+
+#app .slider.calendar .row-item li:hover {
+  cursor: pointer;
+}
+
+#app .slider.project-selector {
+  overflow-x: hidden;
+}
+
+#app .slider.project-selector:hover {
+  cursor: pointer;
+}
+
+#app .slider.project-selector .title {
+  font-weight: bold;
+  color: white;
+  font-family: sans-serif;
+}
+
+#app .slider.project-selector .hint {
+  color: white;
+  opacity: .7;
+}
+
+#app .slider.project-selector .foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px 0;
+}
+
+#app .slider.project-selector .foot button {
+  background: none;
+  border: none;
+  padding: 7px;
+}
+
+#app .slider.project-selector .foot button:hover {
+  cursor: pointer;
+}
+
+#app .slider.project-selector .foot .bullets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 7px;
+}
+
+#app .slider.project-selector .foot .bullets li {
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  background: white;
+  opacity: .7;
+  list-style: none;
+}
+
+#app .slider.project-selector .foot .bullets li.active {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+#widget .header {
+  margin: 7px 0;
+}
+
+#widget .header .title {
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#widget .widget-title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+#widget .widget-title .title-header {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#widget .widget-title .addon-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#widget .widget-title #widget-menu {
+  margin-right: 12px;
+  padding: 5px;
+}
+
+#widget .widget-title #widget-menu li {
+  background: white;
+}
+
+#widget .planning-container {
+  padding: 11px;
+  border-radius: 7px;
+  background: white;
+  text-align: center;
+  bottom: 17px;
+}
+
+#widget .planning-container:hover {
+  cursor: pointer;
+}
+
+#widget .planning-container .title {
+  font-weight: bold;
+}
+
+#widget .progress-container .countdown-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#widget .progress-container .countdown-container .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  padding: 7px 5px;
+  min-width: 19px;
+  margin-right: 7px;
+  background: white;
+  border-radius: 9px;
+  font-size: 11px;
+}
+
+#widget .progress-item {
+  grid-area: progress-item;
+  background: white;
+  border-radius: 13px;
+  color: black;
+  margin: 7px 0;
+  padding: 10px;
+}
+
+#widget .progress-item .row-container-flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#widget .progress-item .title {
+  font-weight: bold;
+  grid-area: title;
+  font-size: 13px;
+}
+
+#widget .progress-item .glass {
+  grid-area: progress;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 3px;
+  margin-right: 11px;
+  border-radius: 20px;
+  background: #dadada;
+}
+
+#widget .progress-item .glass .fluid {
+  background: linear-gradient(36deg, #4b72ff, #02def4);
+  height: 3px;
+  border-radius: 20px;
+}
+
+#widget .progress-item .indicator {
+  grid-area: indicator;
+  font-size: 11px;
+}
+
+#widget .progress-item .tag-date {
+  grid-area: date;
+  font-size: 11px;
+}
+
+#widget .card {
+  background: white;
+  color: black;
+  margin-top: 0;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#widget .card .header {
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+#widget .card .header .id {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#widget .card .avatar {
+  grid-area: avatar;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+#widget .card .avatar .user-img {
+  border-radius: 50%;
+}
+
+#widget .card .text-info {
+  grid-area: info;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+#widget .card .text-info .name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#widget .card .text-info .bio {
+  margin: 6px 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+#widget .card .text-info .contacts {
+  margin-top: 7px;
+  padding-top: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#widget .card .text-info .contacts li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#widget .card .text-info .contacts li:hover {
+  cursor: pointer;
+}
+
+#widget .card .text-info .contacts .tag.link {
+  font-size: 13px;
+}
+/*# sourceMappingURL=extend.css.map */

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&family=Pacifico&display=swap');
+/* Fonts:
+font-family: 'Montserrat', sans-serif;
+font-family: 'Pacifico', cursive;
+*/
+
+:root{
+    font-family: sans-serif;
+}
+
+button:hover{
+    cursor: pointer;
+}
+button{
+    padding: 3px;
+}
+
+.profile-card{
+    display: grid;
+    grid: 
+    [head] "header" auto [head-end]
+    [ava] "avatar" auto [ava-end]
+    [info] "info" auto [info-end]
+    / 1fr
+    ;
+    grid-gap: 13px;
+}
+
+.profile-card .header{
+    border-bottom: var(--border-light);
+}
+
+.profile-card .text-info .division {
+    color: var(--font-sec);
+}
+
+.profile-card .text-info .contacts{
+    border-top: var(--border-light);
+}
+
+.progress-item{
+    display: grid;
+    grid: 
+    [row-1] "title" auto [end-1]
+    [row-2] "progress" auto [end-2]
+    [row-3] "date"
+    / 1fr
+    ;
+    grid-row-gap: 1.5px;
+}
+
+.progress-container{
+    display: grid;
+    grid:
+    [row] "countdown progress-item" auto [row-end]
+    / 35px 1fr
+    ;
+}
+
+.progress-item .indicator{
+    color: var(--font-sec);
+}
+
+.progress-item .tag-date{
+    color: var(--font-sec);
+}
+
+#widget .card .bio {
+    /* color: var(--font-sec); */
+}
+
+#widget .planning-container .title{
+    font-size: 13px;
+    color: var(--color-b);
+}
+
+#app{
+    display: grid;
+    grid:
+    [row] "left center ." auto [row-end]
+    / 200px 1fr 3%;
+    grid-gap: 13px;
+}
+
+.teamstatus .hint.input{
+    border: var(--border-medium);
+}
+
+.profile-list{
+    display: grid;
+    grid: 
+    [row] "profile content opt" auto [row-end]
+    / 40px 1fr 10px
+    ;
+    align-items: center;
+}
+
+.slider[type|="project-selector"] .foot .bullets li.active{
+    background: var(--color-b) !important;
+}
+
+.slider[type|="calendar"] {
+    color: black;
+    padding: 20px !important;
+}
+
+.slider[type|="calendar"] .header .month{
+    color: var(--color-sec);
+}
+
+.slider[type|="calendar"] .row-item{
+    display: grid;
+    grid:
+    [row] "1 2 3 4 5 6 7 ." [row-end]
+    / 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%
+    ;
+    justify-content: center;
+}
+
+.slider[type|="calendar"] .lable{
+    color: var(--color-sec);
+    font-weight: bold;
+}
+
+.slider[type|="calendar"] .row-item li.active{
+    background-color: var(--color-sec);
+    color: white;
+}
+
+.slider[type|="calendar"] .row-item li.event {
+    color: var(--color-b);
+    font-weight: bold;
+    border: 1px solid var(--color-b)
+}
+
+#app .slider[type|="project-selector"]{
+    background: linear-gradient(70deg, var(--color-pri), var(--color-sec));
+}
+#app .hint{
+    color: var(--color-hide);
+}
+#app .cont{
+    border:1px solid var(--paper);
+    border-radius: 11px;
+    padding: 10px;
+}

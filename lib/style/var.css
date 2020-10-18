@@ -1,0 +1,16 @@
+:root {
+    --border-light: 1px solid rgba(234,234,234, .7);
+    --border-medium: 1px solid rgba(180,180,180, .7);
+    --border-strong: 1px solid rgba(70,70,70, .7);
+    --txt: 1px 1px 3px rgba(0,0,0,.7);
+    --color-pri: #ef629f;
+    --color-sec: #eecda3;
+    --color-hide: rgb(150,150,150);
+    --color-b: #03A9F4;
+    --paper: rgb(240,240,240);
+    --boxshadow: 3px 3px 5px rgba(0,0,0,.3);
+
+    /* FONTS */
+    --font-sec: rgb(150,150,150);
+    --font-header-size: 15px;
+}

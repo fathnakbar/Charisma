@@ -1,0 +1,71 @@
+.avatar {
+  border-radius: 50%;
+}
+
+.link {
+  color: #03A9F4;
+}
+
+.row-container-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  display: block;
+  margin: 11px 0;
+}
+
+.title-header {
+  font-size: 15px;
+}
+
+#widget {
+  font-family: sans-serif;
+  color: white;
+  background: linear-gradient(41deg, #eecda3, #ef629f);
+  border: 0.5px solid #eaeaea;
+  border-radius: 20px;
+  margin: 27px 20px;
+  padding: 17px;
+  -webkit-box-shadow: 0px 7px 12px rgba(236, 145, 159, 0.57);
+          box-shadow: 0px 7px 12px rgba(236, 145, 159, 0.57);
+  position: relative;
+}
+
+#app {
+  margin-right: 20px;
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+}
+
+.menu-icon li {
+  width: 16px;
+  height: 2px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.opt-icon {
+  grid-area: opt;
+  padding: 7px;
+}
+
+.opt-icon:hover {
+  cursor: pointer;
+}
+
+.opt-icon li {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: black;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/*# sourceMappingURL=widget.css.map */

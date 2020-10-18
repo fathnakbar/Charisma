@@ -1,24 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Charisma</title>
 
+    <link rel="stylesheet" href="/lib/style/widget.css">
+    <link rel="stylesheet" href="/lib/style/grid.css">
+    <link rel="stylesheet" href="/lib/style/var.css">
     <link rel="stylesheet" href="./style/extend.css">
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="/lib/widget.css">
+    <link rel="stylesheet" href="./style/add-on.css">
 </head>
+
 <body>
     <div id="widget">
-    <!-- Profile card -->
-        <div class="card-container">
-            
+        <div class="row-container-flex widget-title">
+            <div id="widget-menu" class="menu-icon">
+                <li></li>
+                <li style="margin: 4px 0;width: 12px;"></li>
+                <li></li>
+            </div>
+            <span class="title-header">Dashboard</span>
+            <div class="addon-button">
+                <img src="/res/icons/envelope.svg" alt="" width="18" height="18">
+            </div>
         </div>
-    
-    <!-- TODO list -->
-        <div></div>
+
+        <!-- Profile card -->
+        <div class="card container profile-card">
+            <div class="header">
+                <span class="id">fathanakbar</span>
+                <!-- Note: create new icons for opt -->
+                <div class="opt-icon">
+                    <li></li>
+                    <li style="margin: 2px 0;"></li>
+                    <li></li>
+                </div>
+            </div>
+            <div class="avatar">
+                <img src="/res/profile.jpg" class="user-img" alt="User-1" height="70" width="auto">
+            </div>
+            <div class="text-info">
+                <span class="name">fathan</span>
+                <div class="row-container-flex">
+                    <div class="bio">Artist</div>
+                </div>
+                <div class="contacts">
+                    <li class="tag link">www.github.com</li>
+                </div>
+            </div>
+        </div>
+        <!-- Progress list -->
+        <div class="v-list container">
+            <div class="header">
+                <span class="title">Progress</span>
+            </div>
+            <div class="progress-container">
+                <div class="countdown-container">
+                    <div class="date"><b>7</b><span>m</span></div>
+                </div>
+                <div class="progress-item">
+                    <span class="title">Perizinan Hutan Harapan</span>
+                    <div class="row-container-flex">
+                        <div class="glass">
+                            <div class="fluid" style="width: 30%;"></div>
+                        </div>
+                        <span class="indicator">12 / 22</span>
+                    </div>
+                    <span class="tag-date" >2 Dec 2020</span>
+                </div>
+            </div>
+            <div class="progress-item">
+                <span class="title">Pesawat Sukhoi</span>
+                <div class="row-container-flex">
+                    <div class="glass">
+                        <div class="fluid" style="width: 20%;"></div>
+                    </div>
+                    <span class="indicator">57 / 114</span>
+                </div>
+                <span class="tag-date" >2 Feb 2025</span>
+            </div>
+            <div class="progress-container">
+                <div class="countdown-container">
+                    <div class="date"><b>8</b><span>y</span></div>
+                </div>
+                <div class="progress-item">
+                    <span class="title">Lumbung pangan</span>
+                    <div class="row-container-flex">
+                        <div class="glass">
+                            <div class="fluid" style="width: 20%;"></div>
+                        </div>
+                        <span class="indicator">57 / 114</span>
+                    </div>
+                    <span class="tag-date" >2 Feb 2025</span>
+                </div>
+            </div>
+        </div>
+        <div class="planning-container">
+            <span class="title">Create new project</span>
+        </div>
     </div>
-    <div id="app"></div>
+    <div id="app">
+        <!-- On smaller screen left-side container will delete -->
+        <div class="h-aligned container left-side">
+            <!-- Project indicator -->
+            <div class="slider container cont project-selector" type="project-selector">
+                <div class="hint">Current project </div>
+                <span class="title" id="project-name">Lumbung pangan</span>
+                <div class="foot">
+                    <!-- <button class="left"><img src="/res/icons/arrow.svg" alt="" height="11" width="11" style="transform:rotate(180deg);"></button>
+                    <button class="right"><img src="/res/icons/arrow.svg" alt="" height="11" width="11"></button> -->
+                    <div class="bullets">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                    </div>
+                </div>
+            </div>
+            <!-- Project filter -->
+            <div class="dropdown container cont">
+                <div class="hint">Work path</div>
+                <div class="row">
+                    <div class="title">Buzzer</div>
+                    <!-- Insert svg directly instead img elment. To make it able to styled -->
+                    <button class="drop-button"><img src="/res/icons/arrow.svg" alt="" height="10" width="10" style="transform: rotate(90deg)"></button>
+                </div>
+            </div>
+            <!-- Team status -->
+            <div class="h-list container cont teamstatus">
+                <!-- When the team profile card click. The Info will feed the widget -->
+                <div class="hint input">Project team</div>
+                <div class="profile-list">
+                    <img src="/res/chandra.jpg" alt="" width="35" heihgt="35" class="avatar">
+                    <div class="info">
+                        <div class="name">chandralee</div>
+                        <div class="status">Working on Buzzer </div>
+                    </div>
+                </div>
+                <br>
+                <div class="profile-list">
+                    <img src="/res/shawnmandes.jpg" alt="" width="35" heihgt="35" class="avatar">
+                    <div class="info">
+                        <div class="name">shawnmendes</div>
+                        <div class="status">Working on Buzzer </div>
+                    </div>
+                </div>
+                <br>
+                <div class="profile-list">
+                    <img src="/res/therock.jpg" alt="" width="35" heihgt="35" class="avatar">
+                    <div class="info">
+                        <div class="name">therock</div>
+                        <div class="status">Working on Buzzer </div>
+                    </div>
+                </div>
+                <br>
+                <div class="profile-list">
+                    <img src="/res/bintang.jpg" alt="" width="35" heihgt="35" class="avatar">
+                    <div class="info">
+                        <div class="name">bintangemon</div>
+                        <div class="status">Working on Buzzer </div>
+                    </div>
+                </div>
+                <div class="hint sec">4 members in total</div>
+            </div>
+        </div>
+        <div class="h-aligned container main-content">
+            <!-- Calendar -->
+            <div class="slider calendar container cont" type="calendar">
+                <div class="header">
+                    <div class="year">2020</div>
+                    <!-- Use animations when selecting the month -->
+                    <div class="month">October</div>
+                </div>
+                <br>
+                <!--
+                     When certain days clicked or month. the script
+                     then feed the widget and the widget will render the
+                     data. It will show the events and rundown
+                -->
+                <div class="calendar">
+                    <div class="lable row-item">
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                        <li>Sun</li>
+                    </div>
+                    <div class="week row-item">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </div>
+                    <div class="week row-item">
+                        <li>8</li>
+                        <li>9</li>
+                        <li class="active">10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li class="event">14</li>
+                    </div>
+                    <div class="week row-item">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </div>
+                    <div class="week row-item">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </div>
+                    <div class="week row-item">
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </div>
+                </div>
+            </div>
+            <!-- Journal Post -->
+            <div class="container">
+                <!-- 2 kind of post: 1 is team post and the other is project updates -->
+                
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

@@ -10,8 +10,8 @@ body {
     display: grid;
 
     grid-template: 
-    [app-start] "widget app ." 1fr [app-end]
-    / 300px 1fr 243px
+    [app-start] "widget app" 1fr [app-end]
+    / 305px 1fr
     ;
     overflow: hidden;
 }
